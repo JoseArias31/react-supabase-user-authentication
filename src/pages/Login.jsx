@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate} from 'react-router-dom';
 import { supabase } from '../client';
-import './Login.css'
+import './login.css'
 import LoginNavBar from './navLogin'
 import Footer from './footer'
 const Login = ({setToken}) => {

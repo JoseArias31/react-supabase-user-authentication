@@ -1,6 +1,6 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import './Login.css';
+import './login.css';
 
 function Footer() {
   return (
@@ -15,7 +15,7 @@ function Footer() {
         <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
           <img src="/instagram-logo.png" alt="Instagram" className="social-icon" />
         </a>
-        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+        <a href="https://icons8.com/icon/12599/github" target="_blank" rel="noopener noreferrer">
           <img src="/github-logo.png" alt="GitHub" className="social-icon" />
         </a>
       </div>
