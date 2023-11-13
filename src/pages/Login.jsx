@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useNavigate} from 'react-router-dom';
 import { supabase } from '../client';
+import './Login.css'
+
 
 const Login = ({setToken}) => {
   let navigate = useNavigate()
@@ -50,6 +52,12 @@ const Login = ({setToken}) => {
 
   return (
     <div>
+    <nav id='loginNav'>
+
+    </nav>
+
+
+    <div id='login'>
       <form onSubmit={handleSubmit}>
         
 
@@ -73,6 +81,7 @@ const Login = ({setToken}) => {
 
       </form>
       Don't have an account? <Link to='/signup'>Sign Up</Link> 
+    </div>
     </div>
   )
 }
