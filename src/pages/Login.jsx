@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Link, useNavigate} from 'react-router-dom';
 import { supabase } from '../client';
 import './Login.css'
-
-
+import LoginNavBar from './navLogin'
+import Footer from './footer'
 const Login = ({setToken}) => {
   let navigate = useNavigate()
 
@@ -51,22 +51,20 @@ const Login = ({setToken}) => {
 
 
   return (
-    <div>
-    <nav id='loginNav'>
-
-    </nav>
+    <div id='loginContainer'>
+    <LoginNavBar />
 
 
     <div id='login'>
-      <form onSubmit={handleSubmit}>
-        
-
+      <form id='formLogin' onSubmit={handleSubmit}>
+      <h2>Login</h2>
+      <label htmlFor="email">Email:</label>
         <input 
           placeholder='Email'
           name='email'
           onChange={handleChange}
         />
-
+ <label htmlFor="password">Password:</label>
         <input 
           placeholder='Password'
           name='password'
@@ -75,14 +73,16 @@ const Login = ({setToken}) => {
         />
 
         <button type='submit'>
-          Submit
+          Sign in
         </button>
 
 
       </form>
       Don't have an account? <Link to='/signup'>Sign Up</Link> 
     </div>
+    <Footer />
     </div>
+    
   )
 }
 
